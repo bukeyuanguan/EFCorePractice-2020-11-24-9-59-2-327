@@ -28,7 +28,10 @@ namespace EFCorePractice
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddDbContext<CompanyDbContext>(options => { options.UseMySql(this.Configuration.GetConnectionString("Default")); });
+            services.AddDbContext<CompanyDbContext>(options => 
+            { 
+                options.UseMySql(this.Configuration.GetConnectionString("Default"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
